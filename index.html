@@ -85,7 +85,7 @@
       // console.log((time[element]).replace(/\s/g, ""));
 
       if (after8 && before6) {
-        var newBlock = $("<div>").attr("class", "time-block col-md-1 offset-md-1").text(time[element]).attr("id", (time[element]).replace(/\s/g, ""));
+        var newBlock = $("<div>").attr("class", "row hour col-md-1 offset-md-1").text(time[element]).attr("id", (time[element]).replace(/\s/g, ""));
         var newInput = $("<input>").attr("class", "col-md-8").attr("onfocus", "this.value=''").attr("placeholder", "").attr("id", (time[element]).replace(/\s/g, ""));
         var newBtn = $("<button>").attr("class", "saveBtn col-md-1").text("Save").attr("id", (time[element]).replace(/\s/g, ""));
 
@@ -131,7 +131,7 @@
   hourlyTimeblock();
 
   // Save button to update Timeblock data
-  $("button").click(function () {
+  $(".saveBtn").click(function () {
     var getId = this.id;
     // console.log(this.id);
     var newInput = $("input[id='" + getId + "']");
